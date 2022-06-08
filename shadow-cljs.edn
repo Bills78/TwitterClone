@@ -1,0 +1,15 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src"]
+
+ :dependencies
+ [[reagent "1.1.1"]
+  [fipp "0.6.26"]
+  [metosin/reitit "0.5.18"]]
+
+ :dev-http {3000 "public"}
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js"
+        :asset-path "/js"
+        :modules {:main {:entries [main.app.core]}}}}}
